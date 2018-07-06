@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blockchain Concept</title>
+    <script src="public/javascripts/lib/jquery.min.js"></script>
+    <script src="public/javascripts/lib/sha256.js"></script>
+    <script src="public/javascripts/blockchain.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/blockchain.css">
+    <script>
+    // Jquery style to append a hash
+      $("document").ready(function(){
+      $("#btn1").click(function(){
+        $("#hash1").append(CryptoJS.SHA256($("#txta1").val()+$("#prevhash1").val()).toString());
+        console.log(CryptoJS.SHA256("Message").toString());
+      });
+    });
+
+
+    window.onload = function what(){
+
+      // manually creating a block
+      const b = new Block(index="12", previousHash="0000eage335vfet4thw", timestamp=Date(), data="Blockchain Data!",hash="", nonce=12)
+      console.log(b)
+
+      // creating a blockchain
+      const bc = new Blockchain()
+      console.log(bc.get())
+      console.log(bc.calculateHash)
+
+
+    };
+
+  </script>
+  </head>
+
+  <body>
+<!-- Genesis Block -->
+    <div id="container" class="container">
+      <div class="block well-error">
+          <label>Block:</label>
+          <textarea>#1</textarea>
+          <label>Data:</label>
+          <textarea id="txta1"></textarea>
+          <label>Hash:</label>
+          <textarea id="hash1"></textarea>
+          <label>Previous Hash:</label>
+          <textarea id="prevhash1">aeebad4a796fcc2e15dc4c6061b45ed9b373f26adfc798ca7d2d8cc58182718e</textarea>
+          <button id="btn1">Mine</button>
+      </div>
+
+<!-- TODO:  Remove -->
+      <div class="block well-success">
+          <label>Block:</label>
+          <textarea></textarea>
+          <label>Data:</label>
+          <textarea id="txta1"></textarea>
+          <label>Hash:</label>
+          <textarea id="hash1"></textarea>
+          <label>Previous Hash:</label>
+          <textarea></textarea>
+          <button id="btn1">Mine</button>
+      </div>
+
+<!-- TODO:  Remove -->
+      <div class="block">
+          <label>Block:</label>
+          <textarea></textarea>
+          <label>Data:</label>
+          <textarea id="txta1"></textarea>
+          <label>Hash:</label>
+          <textarea id="hash1"></textarea>
+          <label>Previous Hash:</label>
+          <textarea></textarea>
+          <button id="btn1">Mine</button>
+      </div>
+
+    </div>
+
+  <div class="block">
+  <form>
+    <input type="text"></input>
+    <br>
+    <button onclick="addDivBlock()">Add Block</button>
+  </form>
+  </div>
+
+  </body>
+</html>

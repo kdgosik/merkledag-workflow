@@ -1,0 +1,65 @@
+html {
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
+  background-color: lightgray;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+body > .container-fluid {
+  padding: 60px 15px 0;
+}
+
+.container-fluid .text-muted {
+  margin: 20px 0;
+}
+
+.block {
+    width: 500px;
+    border: 5px solid black;
+    padding: 25px;
+    margin: 25px;
+}
+
+.well-success {
+  background: rgb(223, 240, 216);
+}
+
+.well-error {
+  background: rgb(250, 220, 220);
+}
+
+button {
+    /* in order to define widths */
+    display: inline-block;
+}
+
+label {
+    width: 40%;
+    /* positions the label text beside the input */
+    text-align: left;
+}
+
+label + input {
+    width: 30%;
+    /* large margin-right to force the next element to the new-line
+       and margin-left to create a gutter between the label and input */
+    margin: 0 30% 0 4%;
+}
+
+textarea {
+  width: 90%;
+  margin: 0 30% 0 4%;
+}

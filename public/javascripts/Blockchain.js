@@ -180,6 +180,10 @@ class Blockchain {
 // function to add a div element to display a block
 function addDivBlock() {
 
+  var data;
+
+  data = document.getElementById("blockdata").value;
+
   var div = document.createElement("DIV");
   div.classList.add("block");
 
@@ -197,6 +201,7 @@ function addDivBlock() {
   div.appendChild(data_label);
 
   var data_textarea = document.createElement("textarea");
+  data_textarea.innerHTML = data;
   div.appendChild(data_textarea);
 
   // Hash

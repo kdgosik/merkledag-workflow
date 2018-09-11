@@ -27,7 +27,6 @@ func AddFile(ipfs *core.IpfsNode, file string) (string, error) {
 type Block struct {
   Name string
   Timestamp string
-  Data string
   Hash string
   PrevHash string
 }

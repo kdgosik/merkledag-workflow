@@ -1,23 +1,29 @@
 import pandas as pd
 import os
+import time
 import hash_file
 
+# type Block struct {
+#   Name string
+#   Timestamp string
+#   Hash string
+#   PrevHash string
+# }
+
 # Initalising the dictionary
-reviews = {}
+merkledag = []
 
 # Filling the dictionary
-for line in lines:
-  l = line.strip().split("\t")
+for f in os.listdir('.'):
+    if os.path.isfile(f):
+        name = f
+        timestamp = time.time()
+        hash = hash_file.hash_file(f)
+        prevhash = ''
 
-  # These are just training wheels to see more clearly what goes into the dictionary
-  score = l[0]
-  id = l[1]
-  title = l[2]
-  review = l[3]
-
-  reviews[id] = {"score" : score, "title" : title, "review" : review}
+        merkledag.append({"Name" : name, "Timestamp" : timestamp, "Hash" : hash, "PrevHash": prevhash})
 
 
-
-merkledag = [{}]
+# creating a dataframe of the merkledag
 df = pd.DataFrame(merkledag)
+df.to_csv("PracticeDAG.csv", index = False)

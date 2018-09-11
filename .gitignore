@@ -2,3 +2,6 @@
 .*~
 node_modules/
 tools/runkeeper/
+R/.Rproj.user
+.DS_Store/
+.dockerignore

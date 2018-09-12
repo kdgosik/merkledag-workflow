@@ -1,0 +1,2 @@
+include README.rst
+include merkledag/tests/test.txt

@@ -40,13 +40,15 @@ class Block:
 
 
 def create_genesis_block(file_name):
-    # Manually construct a block with
-    # index zero and arbitrary previous hash
+    # Manually construct a block by giving a file name
+    # TODO add to the merkle dag file from init() function below
     return Block(file_name, date.datetime.now(), "GenesisFile")
 
 
 
 def next_block(file_name, last_block):
+    # TODO add to the merkle dag file from init() function below
+    # TODO extend to include multiple hashes for each file it depends on
     this_name = file_name
     this_timestamp = date.datetime.now()
     this_hash = last_block.hash
@@ -60,6 +62,24 @@ def next_block(file_name, last_block):
 def init():
     """
     initialize the repository to create csv and/or json file to hold the dag file of blocks.
+    """
 
 
+
+def lookup():
+    """
+    Look up function to see if hash and/or file already exists in merkle dag
+    """
+
+
+
+def visualizer():
+    """
+    create a visualizer of the merkle dag
+    """
+
+
+def other_cool_functions():
+    """
+    any other cool functions needed to make this function better?
     """

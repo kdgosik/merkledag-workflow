@@ -1,8 +1,8 @@
 *~
 .*~
 *.pyc
-node_modules/
+js/node_modules/
 tools/runkeeper/
 R/.Rproj.user
 .DS_Store/
-.dockerignore
+js/.dockerignore

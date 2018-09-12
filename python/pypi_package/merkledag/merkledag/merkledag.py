@@ -65,6 +65,11 @@ def init():
     """
 
 
+def jupyter_cell_to_script():
+    """
+    script to make a jupyter notebook cell into an independent python script using template.py
+    """
+
 
 def lookup():
     """

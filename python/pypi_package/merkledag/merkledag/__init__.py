@@ -24,4 +24,11 @@ def hash_file(file_to_hash, BLOCKSIZE=65536, hasher=hashlib.sha256()):
 
 if __name__ == "__main__":
     import sys
-    hash_file(sys.argv[1])
+
+    ## mock example
+    new_block_list = []
+    for a in sys.argv:
+        new_block_list.append(create_genesis_block(a))
+
+    ## hashes output file and connects it to all input files
+    output_block = next_block('output_name.txt', new_block_list)

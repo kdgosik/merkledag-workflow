@@ -6,3 +6,4 @@ tools/runkeeper/
 R/.Rproj.user
 .DS_Store/
 js/.dockerignore
+.ipynb_checkpoints/

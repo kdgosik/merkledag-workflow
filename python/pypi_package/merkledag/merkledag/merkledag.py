@@ -8,11 +8,12 @@ import datetime as date
 ## TODO include previous_hash when hashing the file?
 ## may need to make previous_hash a list of previous hashes
 class Block:
-    def __init__(self, name, timestamp, previous_hash):
+    def __init__(self, name, timestamp, previous_hashes):
         self.name = name
         self.timestamp = str(timestamp)
-        self.previous_hash = previous_hash
-        self.hash = self.hash_file()
+        self.data = self.hash_file()
+        self.previous_hashes = sorted(previous_hashes)
+        self.hash = self.hash_block()
 
     def hash_file(self):
         BLOCKSIZE = 65536
@@ -24,6 +25,17 @@ class Block:
                 buf = afile.read(BLOCKSIZE)
         return(hasher.hexdigest())
 
+        ## TODO not sure if I need to include the timestamp
+    def hash_block(self):
+        sha = hashlib.sha256()
+        sha.update(str(self.name) +
+                   # str(self.timestamp) +
+                   str(self.data) +
+                   str(self.previous_hashes))
+        return sha.hexdigest()
+
+
+
 
 
 ## genesis block creation function
@@ -32,7 +44,7 @@ class Block:
 def create_genesis_block(file_name):
     # Manually construct a block by giving a file name
     # TODO add error checking
-    newBlock = Block(file_name, date.datetime.now(), 'GenesisFile')
+    newBlock = Block(file_name, date.datetime.now(), ['GenesisFile'])
 
     ## add new block to merkledag file
     with open('merkledag_file.json', 'r') as in_file:

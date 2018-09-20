@@ -1,0 +1,17 @@
+[
+    {
+        "hash": "GenesisFile", 
+        "name": "root", 
+        "previous_hash": "", 
+        "timestamp": "2018-09-20 17:07:20.437802"
+    }, 
+    {
+        "data": "396c921bc9cf625a4ab755540084aa3d0d941c4ffed8681299689b1f502c3ac2", 
+        "hash": "896a5bc0bfeb229774e5545661441825e50be1a3c510082566e2dc23d7596a4e", 
+        "name": "iris.csv", 
+        "previous_hashes": [
+            "GenesisFile"
+        ], 
+        "timestamp": "2018-09-20 17:07:20.783649"
+    }
+]

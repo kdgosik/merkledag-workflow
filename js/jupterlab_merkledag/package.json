@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "jupterlab_merkledag",
+  "version": "0.0.1",
+  "description": "Using hash linking of merkledag to track notebook cells",
+  "author": "Kirk Gosik",
+  "main": "lib/plugin.js",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension"
+  ],
+  "jupyterlab": {
+    "extension": true
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}

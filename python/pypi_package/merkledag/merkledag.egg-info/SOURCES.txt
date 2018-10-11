@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+merkledag/__init__.py
+merkledag/__main__.py
+merkledag/merkledag.py
+merkledag.egg-info/PKG-INFO
+merkledag.egg-info/SOURCES.txt
+merkledag.egg-info/dependency_links.txt
+merkledag.egg-info/entry_points.txt
+merkledag.egg-info/not-zip-safe
+merkledag.egg-info/requires.txt
+merkledag.egg-info/top_level.txt
+merkledag/tests/test.txt

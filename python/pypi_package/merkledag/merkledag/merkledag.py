@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import hashlib
 import os
 import json
@@ -29,39 +31,37 @@ class Block:
 
         ## defined above
     def hash_file(self):
-        return hash_file(self.name)
+        return(hash_file(self.name))
 
-        ## TODO not sure if I need to include the timestamp
+        ## hash the entire block for refernce in next block
     def hash_block(self):
         sha = hashlib.sha256()
-        sha.update((str(self.name) +
-                   str(self.data) +
-                   str(self.previous_hashes)).encode('utf-8'))
+        sha.update((str(self.data) + str(self.previous_hashes)).encode('utf-8'))
         return sha.hexdigest()
 
 
 ## Add Block to replace create_genesis_block and next_block
-def add_block(file_name, depend_files):
-    this_name = file_name # tracks current name of file
+def add_block(file_name, depend_files, output_file = 'merkledag_file.json'):
+    # if merkledag file doesn't exist, create it
+    if not os.path.isfile(output_file):
+        d = []
+        ## writing with indetation for a pretty print
+        with open('merkledag_file.json', 'w') as out_file:
+            json.dump(d, out_file, indent=4)
 
-    if depend_files == "": # checks if a genesis file (no previous file dependencies)
-            # if merkledag file doesn't exist, create it
-        if not os.path.isfile('merkledag_file.json'):
-            d = []
-            ## writing with indetation for a pretty print
-            with open('merkledag_file.json', 'w') as out_file:
-                json.dump(d, out_file, indent=4)
+    # checks if a genesis file (no previous file dependencies)
+    if depend_files == "":
 
         ## creates a new block
-        newBlock = Block(this_name, "")
+        newBlock = Block(file_name, "")
 
         ## add new block to merkledag file
-        with open('merkledag_file.json', 'r') as in_file:
+        with open(output_file, 'r') as in_file:
             d = json.load(in_file)
             d.append(newBlock.__dict__)
 
         ## writing with indetation for a pretty print
-        with open('merkledag_file.json', 'w') as out_file:
+        with open(output_file, 'w') as out_file:
             json.dump(d, out_file, indent=4)
 
     else:  ## if depend are given
@@ -73,15 +73,15 @@ def add_block(file_name, depend_files):
             file_block_hash = file_block['hash']
             previous_hashes.append(file_block_hash)
 
-        newBlock = Block(this_name, previous_hashes)
+        newBlock = Block(file_name, previous_hashes)
 
         ## add new block to merkledag file
-        with open('merkledag_file.json', 'r') as in_file:
+        with open(output_file, 'r') as in_file:
             d = json.load(in_file)
             d.append(newBlock.__dict__)
 
         ## writing with indetation for a pretty print
-        with open('merkledag_file.json', 'w') as out_file:
+        with open(output_file, 'w') as out_file:
             json.dump(d, out_file, indent=4)
 
 

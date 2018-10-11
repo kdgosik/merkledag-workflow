@@ -2,7 +2,7 @@ import hashlib
 import os
 import json
 import datetime as date
-
+import time
 
 ## chunks a file and hashes the content
 def hash_file(name):
@@ -20,9 +20,9 @@ def hash_file(name):
 ## Block class for creating block structure
 ## may need to make previous_hash a list of previous hashes
 class Block:
-    def __init__(self, name, timestamp, previous_hashes):
+    def __init__(self, name, previous_hashes):
         self.name = name
-        self.timestamp = str(timestamp)
+        self.timestamp = str(time.ctime(os.path.getmtime(name)))
         self.data = self.hash_file()
         self.previous_hashes = sorted(previous_hashes)
         self.hash = self.hash_block()
@@ -43,7 +43,6 @@ class Block:
 ## Add Block to replace create_genesis_block and next_block
 def add_block(file_name, depend_files):
     this_name = file_name # tracks current name of file
-    this_timestamp = date.datetime.now() # creates timestamp
 
     if depend_files == "": # checks if a genesis file (no previous file dependencies)
             # if merkledag file doesn't exist, create it
@@ -54,7 +53,7 @@ def add_block(file_name, depend_files):
                 json.dump(d, out_file, indent=4)
 
         ## creates a new block
-        newBlock = Block(this_name, this_timestamp, "")
+        newBlock = Block(this_name, "")
 
         ## add new block to merkledag file
         with open('merkledag_file.json', 'r') as in_file:
@@ -74,7 +73,7 @@ def add_block(file_name, depend_files):
             file_block_hash = file_block['hash']
             previous_hashes.append(file_block_hash)
 
-        newBlock = Block(this_name, this_timestamp, previous_hashes)
+        newBlock = Block(this_name, previous_hashes)
 
         ## add new block to merkledag file
         with open('merkledag_file.json', 'r') as in_file:

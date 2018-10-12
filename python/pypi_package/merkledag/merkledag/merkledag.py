@@ -2,6 +2,7 @@
 
 import hashlib
 import os
+import re
 import json
 import datetime as date
 import time
@@ -27,8 +28,6 @@ def hash_file(name):
     hash = out[0]
     name = out[1].replace('\n', '')
     return(hash)
-
-
 
 
 ## Block class for creating block structure
@@ -80,10 +79,14 @@ def add_block(file_name, depend_files, output_file = 'merkledag_file.json'):
         previous_hashes = []
         ## loop through each dependency
         for l in depend_files:
-            file_data_hash = hash_file(l)
-            file_block = lookup_file(file_data_hash)
-            file_block_hash = file_block['hash']
-            previous_hashes.append(file_block_hash)
+            if lookup_hash(l):
+                previous_hashes.append(l)
+
+            else:
+                file_data_hash = hash_file(l)
+                file_block = lookup_file(file_data_hash)
+                file_block_hash = file_block['hash']
+                previous_hashes.append(file_block_hash)
 
         newBlock = Block(file_name, previous_hashes)
 
@@ -100,14 +103,24 @@ def add_block(file_name, depend_files, output_file = 'merkledag_file.json'):
 
 ## searches merkledag_file.json for the content hash of the file and returns it
 def lookup_file(file_data_hash):
+    out = False
     with open('merkledag_file.json', 'r') as in_file:
         merkledag = json.load(in_file)
     for block in merkledag:
         if block['data'] in file_data_hash:
-            return(block) ## block needed
+            out = block ## block needed
+    return(out)
 
 
-
+## searches merkledag_file.json for the block hash and returns True if found
+def lookup_hash(block_hash):
+    out = False
+    with open('merkledag_file.json', 'r') as in_file:
+        merkledag = json.load(in_file)
+    for block in merkledag:
+        if block['hash'] in block_hash:
+            out = True ## block needed
+    return(out)
 
 
 

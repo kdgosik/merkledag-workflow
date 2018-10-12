@@ -10,7 +10,7 @@ from subprocess import PIPE, run
 from sys import platform
 
 # uses internal systems checksum sha 256 algoritm
-def hash_file(name):
+def checksum_file(name):
     if platform == "linux" or platform == "linux2":
         # linux
         command = 'sha256sum '
@@ -26,7 +26,6 @@ def hash_file(name):
 
     out = result.stdout.split('  ')
     hash = out[0]
-    name = out[1].replace('\n', '')
     return(hash)
 
 
@@ -34,20 +33,23 @@ def hash_file(name):
 ## may need to make previous_hash a list of previous hashes
 class Block:
     def __init__(self, name, previous_hashes):
-        self.name = name
+        self.name = os.path.basename(name)
+        self.path = name
         self.timestamp = str(time.ctime(os.path.getmtime(name)))
-        self.data = self.hash_file()
+        self.description = ''
+        self.author = ''
+        self.checksum = self.checksum_file()
         self.previous_hashes = sorted(previous_hashes)
         self.hash = self.hash_block()
 
         ## defined above
-    def hash_file(self):
-        return(hash_file(self.name))
+    def checksum_file(self):
+        return(checksum_file(self.path))
 
         ## hash the entire block for refernce in next block
     def hash_block(self):
         sha = hashlib.sha256()
-        sha.update((str(self.data) + str(self.previous_hashes)).encode('utf-8'))
+        sha.update((str(self.checksum) + str(self.previous_hashes)).encode('utf-8'))
         return sha.hexdigest()
 
 
@@ -83,8 +85,8 @@ def add_block(file_name, depend_files, output_file = 'merkledag_file.json'):
                 previous_hashes.append(l)
 
             else:
-                file_data_hash = hash_file(l)
-                file_block = lookup_file(file_data_hash)
+                file_checksum = checksum_file(l)
+                file_block = lookup_file(file_checksum)
                 file_block_hash = file_block['hash']
                 previous_hashes.append(file_block_hash)
 
@@ -102,12 +104,12 @@ def add_block(file_name, depend_files, output_file = 'merkledag_file.json'):
 
 
 ## searches merkledag_file.json for the content hash of the file and returns it
-def lookup_file(file_data_hash):
+def lookup_file(file_checksum):
     out = False
     with open('merkledag_file.json', 'r') as in_file:
         merkledag = json.load(in_file)
     for block in merkledag:
-        if block['data'] in file_data_hash:
+        if block['checksum'] in file_checksum:
             out = block ## block needed
     return(out)
 

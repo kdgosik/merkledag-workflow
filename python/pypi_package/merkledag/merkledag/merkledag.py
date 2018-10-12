@@ -94,7 +94,7 @@ def add_block(file_name, depend_files, output_file = 'merkledag_file.json'):
 
         ## writing with indetation for a pretty print
         with open(output_file, 'w') as out_file:
-            json.dump(d, out_file, indent=4)
+            json.dump(merkledag, out_file, indent=4)
 
 
 

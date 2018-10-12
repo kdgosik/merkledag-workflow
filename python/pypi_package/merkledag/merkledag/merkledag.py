@@ -5,17 +5,29 @@ import os
 import json
 import datetime as date
 import time
+from subprocess import PIPE, run
+from sys import platform
 
-## chunks a file and hashes the content
+# uses internal systems checksum sha 256 algoritm
 def hash_file(name):
-    BLOCKSIZE = 65536
-    sha = hashlib.sha256()
-    with open(name, 'rb') as afile:
-        buf = afile.read(BLOCKSIZE)
-        while len(buf) > 0:
-            sha.update(buf)
-            buf = afile.read(BLOCKSIZE)
-    return(sha.hexdigest())
+    if platform == "linux" or platform == "linux2":
+        # linux
+        command = 'sha256sum '
+    elif platform == "darwin":
+        # OS X
+        command = 'shasum -a 256 '
+    elif platform == "win32":
+        # Windows
+        command = 'FCIV -sha256 '
+
+    command = command + name
+    result = run(command, stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
+
+    out = result.stdout.split('  ')
+    hash = out[0]
+    name = out[1].replace('\n', '')
+    return(hash)
+
 
 
 
@@ -44,10 +56,10 @@ class Block:
 def add_block(file_name, depend_files, output_file = 'merkledag_file.json'):
     # if merkledag file doesn't exist, create it
     if not os.path.isfile(output_file):
-        d = []
+        merkledag = []
         ## writing with indetation for a pretty print
         with open('merkledag_file.json', 'w') as out_file:
-            json.dump(d, out_file, indent=4)
+            json.dump(merkledag, out_file, indent=4)
 
     # checks if a genesis file (no previous file dependencies)
     if depend_files == "":
@@ -57,12 +69,12 @@ def add_block(file_name, depend_files, output_file = 'merkledag_file.json'):
 
         ## add new block to merkledag file
         with open(output_file, 'r') as in_file:
-            d = json.load(in_file)
-            d.append(newBlock.__dict__)
+            merkledag = json.load(in_file)
+            merkledag.append(newBlock.__dict__)
 
         ## writing with indetation for a pretty print
         with open(output_file, 'w') as out_file:
-            json.dump(d, out_file, indent=4)
+            json.dump(merkledag, out_file, indent=4)
 
     else:  ## if depend are given
         previous_hashes = []
@@ -77,8 +89,8 @@ def add_block(file_name, depend_files, output_file = 'merkledag_file.json'):
 
         ## add new block to merkledag file
         with open(output_file, 'r') as in_file:
-            d = json.load(in_file)
-            d.append(newBlock.__dict__)
+            merkledag = json.load(in_file)
+            merkledag.append(newBlock.__dict__)
 
         ## writing with indetation for a pretty print
         with open(output_file, 'w') as out_file:
@@ -89,10 +101,10 @@ def add_block(file_name, depend_files, output_file = 'merkledag_file.json'):
 ## searches merkledag_file.json for the content hash of the file and returns it
 def lookup_file(file_data_hash):
     with open('merkledag_file.json', 'r') as in_file:
-        d = json.load(in_file)
-    for i in d:
-        if i['data'] in file_data_hash:
-            return(i) ## file content hash
+        merkledag = json.load(in_file)
+    for block in merkledag:
+        if block['data'] in file_data_hash:
+            return(block) ## block needed
 
 
 

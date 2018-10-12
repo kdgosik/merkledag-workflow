@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='merkledag',
-      version='0.75',
+      version='0.8',
       description='Merkle Dag Workflow Helpers',
       url='http://github.com/kdgosik/MerkleDAGWorkflow',
       author='Kirk Gosik',

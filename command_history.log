@@ -1,0 +1,500 @@
+  179  20181010 10:34:49 python
+  180  20181010 10:35:00 clear
+  181  20181010 10:46:47 ls
+  182  20181010 10:46:50 cd ..
+  183  20181010 10:46:50 ls
+  184  20181010 10:46:53 cd python/
+  185  20181010 10:46:53 ls
+  186  20181010 10:46:57 cd pypi_package/
+  187  20181010 10:46:58 ls
+  188  20181010 10:46:59 clear
+  189  20181010 10:47:02 cd merkledag/
+  190  20181010 10:47:03 ls
+  191  20181010 10:47:06 pip install .
+  192  20181010 10:47:13 clear
+  193  20181010 10:47:13 ls
+  194  20181010 10:47:14 cd ..
+  195  20181010 10:47:15 ls
+  196  20181010 10:47:49 cd ..
+  197  20181010 10:47:49 ls
+  198  20181010 10:48:07 cp template.py /Volumes/ahg_regevdata/users/kgosik/code/python/
+  199  20181010 10:48:17 cp template.R /Volumes/ahg_regevdata/users/kgosik/code/R/
+  200  20181010 10:48:25 ls scripts/
+  201  20181010 10:48:53 cp scripts/create_merkledag.py /Volumes/ahg_regevdata/users/kgosik/code/python/
+  202  20181010 10:49:06 cp scripts/hash_file.py /Volumes/ahg_regevdata/users/kgosik/code/python/
+  203  20181010 10:49:08 clear
+  204  20181011 17:20:37 curl get http://localhost:3000/posts
+  205  20181011 17:20:37 clear
+  206  20181011 17:20:37 ls
+  207  20181011 17:20:37 nano fetch_test.js
+  208  20181011 17:20:37 node fetch_test.js 
+  209  20181011 17:20:37 node 
+  210  20181011 17:20:37 json-server
+  211  20181011 17:20:37 npm install -g json-server
+  212  20181011 17:20:37 ls
+  213  20181011 17:20:37 cat merkledag_file.json 
+  214  20181011 17:20:37 json0server --watch merkledag_file.json 
+  215  20181011 17:20:37 json-server --watch merkledag_file.json 
+  216  20181011 17:20:37 clear
+  217  20181011 17:20:37 cd
+  218  20181011 17:20:37 cd Documents/Projects/
+  219  20181011 17:20:37 ls
+  220  20181011 17:20:37 cd WebApps/
+  221  20181011 17:20:37 ls
+  222  20181011 17:20:37 cd gas-rest-angular/
+  223  20181011 17:20:37 ls
+  224  20181011 17:20:37 cat README.md 
+  225  20181011 17:20:37 cd ..
+  226  20181011 17:20:37 clear
+  227  20181011 17:20:37 ls
+  228  20181011 17:20:37 cd GraphQLPractice/
+  229  20181011 17:20:37 ls
+  230  20181011 17:20:37 cd GraphQL-js/
+  231  20181011 17:20:37 ls
+  232  20181011 17:20:37 cd ExpressServer/
+  233  20181011 17:20:37 ls
+  234  20181011 17:20:37 cat package.json 
+  235  20181011 17:20:37 clear
+  236  20181011 17:20:37 cd ..
+  237  20181011 17:20:37 ls
+  238  20181011 17:20:37 cd WDL_Tasks/
+  239  20181011 17:20:37 ls
+  240  20181011 17:20:37 cd ParseWDLs/
+  241  20181011 17:20:37 ls
+  242  20181011 17:20:37 cd ../..
+  243  20181011 17:20:37 ls
+  244  20181011 17:20:37 cd ..
+  245  20181011 17:20:37 ls
+  246  20181011 17:20:37 cd modern-api/
+  247  20181011 17:20:37 ls
+  248  20181011 17:20:37 json-server --watch https://raw.githubusercontent.com/typicode/json-server/master/db.json
+  249  20181011 17:20:37 cd
+  250  20181011 17:20:37 clear
+  251  20181011 17:20:37 cd Documents/
+  252  20181011 17:20:37 ls
+  253  20181011 17:20:37 cat https://raw.githubusercontent.com/typicode/json-server/master/db.json
+  254  20181011 17:20:37 curl get https://raw.githubusercontent.com/typicode/json-server/master/db.json
+  255  20181011 17:20:37 curl -H get https://raw.githubusercontent.com/typicode/json-server/master/db.json
+  256  20181011 17:20:37 curl -H get https://raw.githubusercontent.com/typicode/json-server/master/db.json > db.json
+  257  20181011 17:20:37 clear
+  258  20181011 17:20:37 cat db.json 
+  259  20181011 17:20:37 json-server --watch db.json 
+  260  20181011 17:20:37 clear
+  261  20181011 17:20:37 cd
+  262  20181011 17:20:37 cd Documents/Projects/MerkleDAGWorkflow/
+  263  20181011 17:20:37 ls
+  264  20181011 17:20:37 clear
+  265  20181011 17:20:37 atom .
+  266  20181011 17:20:37 ls
+  267  20181011 17:20:37 python
+  268  20181011 17:20:37 clear
+  269  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  270  20181011 17:20:37 python 
+  271  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  272  20181011 17:20:37 python
+  273  20181011 17:20:37 clear
+  274  20181011 17:20:37 ls
+  275  20181011 17:20:37 rm merkledag_file.json 
+  276  20181011 17:20:37 ls
+  277  20181011 17:20:37 clear
+  278  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  279  20181011 17:20:37 ls
+  280  20181011 17:20:37 python
+  281  20181011 17:20:37 clear
+  282  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  283  20181011 17:20:37 python
+  284  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  285  20181011 17:20:37 python
+  286  20181011 17:20:37 clear
+  287  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  288  20181011 17:20:37 python
+  289  20181011 17:20:37 clear
+  290  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  291  20181011 17:20:37 python
+  292  20181011 17:20:37 clear
+  293  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  294  20181011 17:20:37 python
+  295  20181011 17:20:37 clear
+  296  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  297  20181011 17:20:37 python
+  298  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  299  20181011 17:20:37 python
+  300  20181011 17:20:37 clear
+  301  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  302  20181011 17:20:37 python
+  303  20181011 17:20:37 clear
+  304  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  305  20181011 17:20:37 python
+  306  20181011 17:20:37 clear
+  307  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  308  20181011 17:20:37 python
+  309  20181011 17:20:37 clear
+  310  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  311  20181011 17:20:37 python
+  312  20181011 17:20:37 clear
+  313  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  314  20181011 17:20:37 python
+  315  20181011 17:20:37 clear
+  316  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  317  20181011 17:20:37 python
+  318  20181011 17:20:37 clear
+  319  20181011 17:20:37 git add --all
+  320  20181011 17:20:37 clear
+  321  20181011 17:20:37 git commit -m "working version of python package"
+  322  20181011 17:20:37 git push
+  323  20181011 17:20:37 clear
+  324  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  325  20181011 17:20:37 clear
+  326  20181011 17:20:37 clear
+  327  20181010 10:56:06 python
+  328  20181010 14:51:32 clear
+  329  20181010 14:51:34 ls
+  330  20181010 14:51:47 rm notebooks/merkledag_file.json 
+  331  20181010 14:51:49 clear
+  332  20181010 14:52:12 ls
+  333  20181010 14:52:16 clear
+  334  20181010 14:52:49 mylog completed merkledag workflow package v1, able to use in python
+  335  20181010 14:52:52 ls
+  336  20181010 14:53:12 cat mylog.log 
+  337  20181010 14:53:20 clear
+  338  20181010 14:53:33 rechist
+  339  20181010 14:56:19 ckear
+  340  20181010 14:56:21 clear
+  341  20181010 14:56:22 ls
+  342  20181010 14:59:33 ls
+  343  20181010 14:59:35 clear
+  344  20181010 15:02:10 ls /Volumes/ahg_regevdata/projects/scGTEx/fastq/10x_heart_01_02_03/HG77NCCXY/
+  345  20181010 15:02:30 ls /Volumes/ahg_regevdata/projects/scGTEx/fastq/10x_heart_01_02_03/HG77NCCXY/heart_02_CST/
+  346  20181010 15:02:32 clear
+  347  20181010 15:02:33 ls
+  348  20181010 15:02:37 ls /Volumes/ahg_regevdata/projects/scGTEx/fastq/10x_heart_01_02_03/HG77NCCXY/
+  349  20181010 15:02:51 ls /Volumes/ahg_regevdata/projects/scGTEx/fastq/10x_he
+  350  20181010 15:02:57 ls /Volumes/ahg_regevdata/projects/scGTEx/fastq/10x_heart_01_02_03/H
+  351  20181010 15:03:00 ls /Volumes/ahg_regevdata/projects/scGTEx/fastq/10x_heart_01_02_03/
+  352  20181010 15:03:07 gevdata/projects/scGTEx/fastq/10x_heart_01_02_03/cellranger_mkfastq_2.1.0.sh 
+  353  20181010 15:03:25 ls /Volumes/ahg_regevdata/projects/scGTEx/fastq/10x_heart_01_02_03/
+  354  20181010 15:03:27 clear
+  355  20181010 15:03:29 ls /Volumes/ahg_regevdata/projects/scGTEx/fastq/10x_heart_01_02_03/
+  356  20181010 15:03:50 cat /Volumes/ahg_regevdata/projects/scGTEx/fastq/10x_heart_01_02_03/cellranger_mkfastq_2.1.0.sh 
+  357  20181011 17:20:37 cd Documents/Projects/MerkleDAGWorkflow/
+  358  20181011 17:20:37 ls
+  359  20181011 17:20:37 clear
+  360  20181011 17:20:37 git status
+  361  20181011 17:20:37 ls
+  362  20181011 17:20:37 clear
+  363  20181011 17:20:37 ls
+  364  20181011 17:20:37 ipfs add README.md 
+  365  20181011 17:20:37 source activate tensorflow
+  366  20181011 17:20:37 jupyter lab
+  367  20181011 17:20:37 clear
+  368  20181011 17:20:37 git add --all
+  369  20181011 17:20:37 git commit -, "attempted to create jupyter lab extension under js folder, needs lots of work"
+  370  20181011 17:20:37 git commit -m "attempted to create jupyter lab extension under js folder, needs lots of work"
+  371  20181011 17:20:37 git push
+  372  20181011 17:20:37 clear
+  373  20181011 17:20:37 cd /Volumes/ahg_regevdata/users/kgosik/
+  374  20181011 17:20:37 ls
+  375  20181011 17:20:37 cp code/python/template.py CrossTissueAnalysis/scripts/python/
+  376  20181011 17:20:37 cp code/R/template.R CrossTissueAnalysis/scripts/R/
+  377  20181011 17:20:37 cp code/R/template.R TemplateProjectFolder/scripts/R/
+  378  20181011 17:20:37 cp code/python/template.py TemplateProjectFolder/scripts/python/
+  379  20181011 17:20:37 clear
+  380  20181011 17:20:37 ls
+  381  20181011 17:20:37 cd CrossTissueAnalysis/
+  382  20181011 17:20:37 jupyterlab 
+  383  20181011 17:20:37 jupyter lab
+  384  20181011 11:15:30 cat /Volumes/ahg_regevdata/projects/scGTEx/alignreads/
+  385  20181011 11:15:52 cat /Volumes/ahg_regevdata/projects/scGTEx/alignreads/heart_01_02_03_premrna/2018_05_15_10x_heart_02_EZ/heart_02_EZ/outs/metrics_summary.csv 
+  386  20181011 11:19:35 ls
+  387  20181011 11:20:08 mylog consider using tensor decomposition for over complete problems
+  388  20181011 11:20:17 knowledge_repo runserver
+  389  20181011 11:21:36 clear
+  390  20181011 11:21:59 knowledge_repo create tensor_decomposition.ipynb
+  391  20181011 11:22:28 knowledge_repo create ipynb tensor_decomposition.ipynb
+  392  20181011 11:52:52 rm merkledag_file.json 
+  393  20181011 11:53:40 rm merkledag_file.json 
+  394  20181011 11:56:49 pip install ~/Documents/Projects/MerkleDAGWorkflow/python/pypi_package/merkledag/
+  395  20181011 13:31:20 mylog create a flask form app for ingestion of qc metrics for 10x runs
+  396  20181011 13:31:21 clear
+  397  20181011 13:31:31 pip install flask flask-wtf
+  398  20181011 13:31:38 clear
+  399  20181011 17:20:37 cd
+  400  20181011 17:20:37 cd /Volumes/ahg_regevdata/users/kgosik/
+  401  20181011 17:20:37 ls
+  402  20181011 17:20:37 cd CrossTissueAnalysis/
+  403  20181011 17:20:37 ls
+  404  20181011 17:20:37 source activate tensorflow
+  405  20181011 17:20:37 jupyter lab
+  406  20181011 17:20:37 clear
+  407  20181011 17:20:37 rm merkledag_file.json 
+  408  20181011 17:20:37 clear
+  409  20181011 17:20:37 python
+  410  20181011 17:20:37 clear
+  411  20181011 17:20:37 cat merkledag_file.json 
+  412  20181011 17:20:37 clear
+  413  20181011 17:20:37 rm merkledag_file.json 
+  414  20181011 17:20:37 jupyter lab
+  415  20181011 17:20:37 cd Documents/Projects/
+  416  20181011 17:20:37 ls
+  417  20181011 17:20:37 cd dev/
+  418  20181011 17:20:37 ls
+  419  20181011 17:20:37 clear
+  420  20181011 17:20:37 ls
+  421  20181011 17:20:37 git clone https://github.com/SungjoonPark/factor_rotation.git
+  422  20181011 17:20:37 source activate tensorflow
+  423  20181011 17:20:37 cd factor_rotation/
+  424  20181011 17:20:37 python example.py 
+  425  20181011 17:20:37 pip install gensim
+  426  20181011 17:20:37 clear
+  427  20181011 17:20:37 pip install gensim
+  428  20181011 17:20:37 clear
+  429  20181011 17:20:37 python example.py 
+  430  20181011 17:20:37 clear
+  431  20181011 17:20:37 cd ..
+  432  20181011 17:20:37 cd ..
+  433  20181011 17:20:37 cd MerkleDAGWorkflow/
+  434  20181011 17:20:37 ls
+  435  20181011 17:20:37 clear
+  436  20181011 17:20:37 ls
+  437  20181011 17:20:37 atom .
+  438  20181011 17:20:37 pip install python/pypi_package/merkledag/
+  439  20181011 17:20:37 git add --all
+  440  20181011 17:20:37 git commit -m "changed to timestamp to file modified date"
+  441  20181011 17:20:37 git push
+  442  20181011 17:20:37 clear
+  443  20181011 17:20:37 cd ../WebApps/
+  444  20181011 17:20:37 ls
+  445  20181011 17:20:37 cd SimpleApp/
+  446  20181011 17:20:37 ls
+  447  20181011 17:20:37 cd ..
+  448  20181011 17:20:37 cler
+  449  20181011 17:20:37 clear
+  450  20181011 17:20:37 ls
+  451  20181011 17:20:37 cd ..
+  452  20181011 17:20:37 ls
+  453  20181011 17:20:37 cd apps
+  454  20181011 17:20:37 ls
+  455  20181011 17:20:37 cd flask/
+  456  20181011 17:20:37 ls
+  457  20181011 17:20:37 cd ..
+  458  20181011 17:20:37 cat Makefile 
+  459  20181011 17:20:37 make flask FormEntry
+  460  20181011 17:20:37 clear
+  461  20181011 17:20:37 ls
+  462  20181011 17:20:37 cd flask/
+  463  20181011 17:20:37 ls
+  464  20181011 17:20:37 cd tm
+  465  20181011 17:20:37 clear
+  466  20181011 17:20:37 cat Mak
+  467  20181011 17:20:37 cat Make
+  468  20181011 17:20:37 clear
+  469  20181011 17:20:37 cd ..
+  470  20181011 17:20:37 cat Makefile 
+  471  20181011 17:20:37 make flask=from-app
+  472  20181011 17:20:37 clear
+  473  20181011 17:20:37 ls flask/
+  474  20181011 17:20:37 ls flask/app
+  475  20181011 17:20:37 ls flask/apps
+  476  20181011 17:20:37 cd ..
+  477  20181011 17:20:37 cd apps
+  478  20181011 17:20:37 ls flask/apps
+  479  20181011 17:20:37 make flask=from-app
+  480  20181011 17:20:37 clear
+  481  20181011 17:20:37 ls
+  482  20181011 17:20:37 la flask/
+  483  20181011 17:20:37 ls flask/
+  484  20181011 17:20:37 ls flask/apps
+  485  20181011 17:20:37 clear
+  486  20181011 17:20:37 clear
+  487  20181011 17:20:37 cd
+  488  20181011 17:20:37 cd Documents/Projects/
+  489  20181011 17:20:37 ls
+  490  20181011 17:20:37 clear
+  491  20181011 17:20:37 sha256
+  492  20181011 17:20:37 ls
+  493  20181011 17:20:37 sha256sum
+  494  20181011 17:20:37 sha256sum Untitled.ipynb 
+  495  20181011 17:20:37 sha1sum
+  496  20181011 17:20:37 ssh login
+  497  20181011 17:20:37 brew install coreutils
+  498  20181011 17:20:37 sha256sum Untitled.ipynb 
+  499  20181011 17:20:37 clear
+  500  20181011 17:20:37 ssh login
+  501  20181011 17:20:42 cd Documents/
+  502  20181011 17:20:42 ls
+  503  20181011 17:20:49 sha256sum sigmajs_explore.R 
+  504  20181011 17:20:51 clear
+  505  20181011 17:31:03 cd Projects
+  506  20181011 17:31:05 cd MerkleDAGWorkflow/
+  507  20181011 17:31:05 l
+  508  20181011 17:31:07 ls
+  509  20181011 17:31:08 clear
+  510  20181011 17:31:12 cler
+  511  20181011 17:31:13 clear
+  512  20181011 17:42:27 python
+  513  20181011 17:43:28 clear
+  514  20181011 17:43:36 pip install python/pypi_package/merkledag/
+  515  20181011 17:43:43 merkledag
+  516  20181011 17:43:46 clear
+  517  20181011 17:43:46 ls
+  518  20181011 17:43:55 merkledag README.md 
+  519  20181011 17:43:59 merkledag README.md ''
+  520  20181011 17:44:55 merkledag README.md LICENSE 
+  521  20181011 17:45:06 clear
+  522  20181011 17:45:10 python
+  523  20181011 17:48:03 clear
+  524  20181011 17:48:10 ls
+  525  20181011 17:48:27 merkledag README.md ""
+  526  20181011 17:48:31 merkledag README.md [""]
+  527  20181011 17:48:37 merkledag README.md []
+  528  20181011 17:48:39 merkledag README.md ['']
+  529  20181011 17:48:41 clear
+  530  20181011 17:51:17 clear
+  531  20181011 17:51:17 ls
+  532  20181011 17:51:20 cd python/
+  533  20181011 17:51:20 ls
+  534  20181011 17:51:37 merkledag template.R template.py example/
+  535  20181011 17:51:44 merkledag template.R template.py README.md
+  536  20181011 17:51:50 clear
+  537  20181011 18:42:43 ls
+  538  20181011 18:42:44 cd ..
+  539  20181011 18:42:45 ls
+  540  20181011 18:42:46 clear
+  541  20181011 18:42:55 pip install -e python/pypi_package/merkledag/
+  542  20181011 18:43:03 merkledag
+  543  20181011 18:43:08 merkledag --help
+  544  20181011 18:43:15 clear
+  545  20181011 18:57:03 pip install -e python/pypi_package/merkledag/
+  546  20181011 18:58:25 merkledag
+  547  20181011 18:58:31 merkledag -h
+  548  20181011 18:58:40 clear
+  549  20181011 18:58:42 ls
+  550  20181011 18:58:52 merkledag README.md 
+  551  20181011 18:58:59 merkledag -i README.md 
+  552  20181011 18:59:04 merkledag -i README.md -l
+  553  20181011 18:59:48 pip install -e python/pypi_package/merkledag/
+  554  20181011 18:59:53 clear
+  555  20181011 18:59:57 merkledag -h
+  556  20181011 18:59:59 clear
+  557  20181011 19:00:09 merkledag -i README.md -l LICENSE 
+  558  20181011 19:00:19 merkledag -i README.md -l
+  559  20181011 19:05:23 pip install -e python/pypi_package/merkledag/
+  560  20181011 19:05:27 clear
+  561  20181011 19:05:32 merkledag -h
+  562  20181011 19:05:39 merkledag -i README.md 
+  563  20181011 19:05:51 pip install -e python/pypi_package/merkledag/
+  564  20181011 19:05:56 clear
+  565  20181011 19:05:58 merkledag -i README.md 
+  566  20181011 19:07:09 pip install -e python/pypi_package/merkledag/
+  567  20181011 19:07:13 merkledag -i README.md 
+  568  20181011 19:07:20 ls
+  569  20181011 19:07:23 cat merkledag_file.json 
+  570  20181011 19:07:32 rm merkledag_file.json 
+  571  20181011 19:07:33 clear
+  572  20181011 19:07:37 merkledag -i README.md 
+  573  20181011 19:07:42 cat merkledag_file.json 
+  574  20181011 19:08:08 merkledag -i LICENSE -l README.md 
+  575  20181011 19:08:19 merkledag -i LICENSE -l ['README.md'] 
+  576  20181011 19:08:22 clear
+  577  20181011 19:10:37 rm merkledag_file.json 
+  578  20181011 19:10:40 pip install -e python/pypi_package/merkledag/
+  579  20181011 19:10:52 merkledag -i README.md 
+  580  20181011 19:10:59 merkledag -i LICENSE 
+  581  20181011 19:11:01 clear
+  582  20181011 19:11:03 cat merkledag_file.json 
+  583  20181011 19:11:21 merkledag -i README.md -l LICENSE 
+  584  20181011 19:11:25 cat merkledag_file.json 
+  585  20181011 19:11:32 merkledag -i README.md -l LICENSE README.md 
+  586  20181011 19:13:58 clear
+  587  20181011 19:14:00 rm merkledag_file.json 
+  588  20181011 19:14:01 clear
+  589  20181011 19:14:09 pip install -e python/pypi_package/merkledag/
+  590  20181011 19:14:18 merkledag -i README.md 
+  591  20181011 19:14:23 merkledag -i LICENSE 
+  592  20181011 19:14:31 merkledag -i README.md -l LICENSE 
+  593  20181011 19:15:19 rm merkledag_file.json 
+  594  20181011 19:15:23 pip install -e python/pypi_package/merkledag/
+  595  20181011 19:15:27 clear
+  596  20181011 19:15:34 merkledag -i README.md 
+  597  20181011 19:15:39 merkledag -i LICENSE 
+  598  20181011 19:15:45 merkledag -i README.md -l LICENSE 
+  599  20181011 19:15:55 merkledag -i README.md -l LICENSE README.md 
+  600  20181011 19:15:58 clear
+  601  20181011 19:17:03 merkledag -i README.md -l LICENSE README.md 
+  602  20181011 19:17:22 merkledag -i README.md -l LICENSE
+  603  20181011 19:17:31 clear
+  604  20181011 19:17:34 cat merkledag_file.json 
+  605  20181011 19:23:26 pip install -e python/pypi_package/merkledag/
+  606  20181011 19:23:32 merkledag -i README.md -l LICENSE
+  607  20181011 19:24:27 pip install -e python/pypi_package/merkledag/
+  608  20181011 19:24:30 merkledag -i README.md -l LICENSE
+  609  20181011 19:24:38 merkledag -i README.md -l LICENSE README.md 
+  610  20181011 19:25:01 pip install -e python/pypi_package/merkledag/
+  611  20181011 19:25:05 clear
+  612  20181011 19:25:08 merkledag -i README.md -l LICENSE README.md 
+  613  20181011 19:25:13 merkledag -i README.md
+  614  20181011 19:25:32 pip install -e python/pypi_package/merkledag/
+  615  20181011 19:25:37 merkledag -i README.md
+  616  20181011 19:25:41 merkledag -i README.md -l LICENSE README.md 
+  617  20181011 19:25:46 merkledag -i README.md -l LICENSE
+  618  20181011 19:26:07 rm merkledag_file.json 
+  619  20181011 19:26:07 clear
+  620  20181011 19:26:10 pip install -e python/pypi_package/merkledag/
+  621  20181011 19:26:22 merkledag -i README.md 
+  622  20181011 19:26:29 merkledag -i LICENSE 
+  623  20181011 19:26:35 merkledag -i LICENSE  -l README.md 
+  624  20181011 19:26:36 clear
+  625  20181011 19:26:38 cat merkledag_file.json 
+  626  20181011 19:26:44 merkledag -i LICENSE  -l README.md LICENSE 
+  627  20181011 19:26:48 cat merkledag_file.json 
+  628  20181011 19:26:52 clear
+  629  20181011 19:26:57 git add --all
+  630  20181011 19:27:12 git commit -m "added cli to package"
+  631  20181011 19:27:22 git push
+  632  20181011 19:38:16 python
+  633  20181011 19:41:14 clear
+  634  20181011 19:41:24 pip install -e python/pypi_package/merkledag/
+  635  20181011 19:41:29 clear
+  636  20181011 19:41:33 merkledag README.md 
+  637  20181011 19:41:39 merkledag -i README.md 
+  638  20181011 19:43:10 pip install -e python/pypi_package/merkledag/
+  639  20181011 19:43:15 merkledag -i README.md 
+  640  20181011 19:43:28 merkledag -i README.md -l LICENSE 
+  641  20181011 19:43:34 merkledag -i README.md -l LICENSE README.md 
+  642  20181011 19:43:44 clear
+  643  20181011 19:43:47 pip install -e python/pypi_package/merkledag/
+  644  20181011 19:43:53 merkledag -i README.md -l LICENSE README.md 
+  645  20181011 19:44:04 merkledag -i README.md -l LICENSE README.md merkledag_file.json 
+  646  20181011 19:44:45 merkledag -i merkledag_file.json 
+  647  20181011 19:44:47 merkledag -i README.md -l LICENSE README.md merkledag_file.json 
+  648  20181011 19:45:05 cat merkledag_file.json 
+  649  20181011 19:45:10 clear
+  650  20181011 19:45:20 merkledag -i README.md -l LICENSE README.md
+  651  20181011 19:45:26 merkledag -i README.md -l LICENSE README.md merkledag_file.json 
+  652  20181011 19:45:33 merkledag -i README.md -l merkledag_file.json 
+  653  20181011 19:45:41 clear
+  654  20181011 19:45:41 ls
+  655  20181011 19:45:48 echo hello > hello.txt
+  656  20181011 19:45:57 echo world > world.txt
+  657  20181011 19:45:58 clear
+  658  20181011 19:45:58 ls
+  659  20181011 19:46:06 merkledag hello.txt 
+  660  20181011 19:46:10 merkledag -i hello.txt 
+  661  20181011 19:46:16 merkledag -i hello.txt -l README.md 
+  662  20181011 19:46:19 merkledag -i hello.txt -l README.md LICENSE 
+  663  20181011 19:46:24 merkledag -i world.txt 
+  664  20181011 19:46:27 clear
+  665  20181011 19:46:36 merkledag -i hello.txt -l world.txt README.md LICENSE 
+  666  20181011 19:46:37 clear
+  667  20181011 19:46:39 cat merkledag_file.json 
+  668  20181011 19:46:49 clear
+  669  20181011 19:46:53 git add --all
+  670  20181011 19:47:27 git add --all
+  671  20181011 19:47:48 git commit -m "updated cli to include output file in argparse"
+  672  20181011 19:47:50 git push
+  673  20181011 19:47:57 clear
+  674  20181011 19:48:03 pip install python/pypi_package/merkledag/
+  675  20181011 19:48:07 clear
+  676  20181011 19:48:43 rechist
+  677  20181011 19:48:49 source ~/.bashrc
+  678  20181011 19:48:53 rechist

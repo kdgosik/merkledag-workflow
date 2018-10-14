@@ -1,0 +1,24 @@
+[
+    {
+        "name": "hello.txt",
+        "path": "hello.txt",
+        "timestamp": "Thu Oct 11 19:45:48 2018",
+        "description": "",
+        "author": "",
+        "checksum": "5891b5b522d5df086d0ff0b110fbd9d21bb4fc7163af34d08286a2e846f6be03",
+        "previous_hashes": [],
+        "hash": "4295ba149e67c6ef2570d3975b316caf0a9c82020f0a756ddea8cbc94101d85b"
+    },
+    {
+        "name": "world.txt",
+        "path": "world.txt",
+        "timestamp": "Thu Oct 11 19:45:57 2018",
+        "description": "",
+        "author": "",
+        "checksum": "e258d248fda94c63753607f7c4494ee0fcbe92f1a76bfdac795c9d84101eb317",
+        "previous_hashes": [
+            "4295ba149e67c6ef2570d3975b316caf0a9c82020f0a756ddea8cbc94101d85b"
+        ],
+        "hash": "4dfa15d1db9464b9e8e908f6ae55d1953d64e3a0a1028e441ef1b0b74a8670ff"
+    }
+]

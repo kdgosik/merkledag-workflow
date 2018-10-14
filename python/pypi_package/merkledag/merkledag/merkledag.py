@@ -54,12 +54,12 @@ class Block:
 
 
 ## Add Block to replace create_genesis_block and next_block
-def add_block(file_name, depend_files, output_file = 'merkledag_file.json'):
+def add_block(file_name, depend_files, merkledag_file = 'merkledag_file.json'):
     # if merkledag file doesn't exist, create it
-    if not os.path.isfile(output_file):
+    if not os.path.isfile(merkledag_file):
         merkledag = []
         ## writing with indetation for a pretty print
-        with open('merkledag_file.json', 'w') as out_file:
+        with open(merkledag_file, 'w') as out_file:
             json.dump(merkledag, out_file, indent=4)
 
     # checks if a genesis file (no previous file dependencies)
@@ -69,12 +69,12 @@ def add_block(file_name, depend_files, output_file = 'merkledag_file.json'):
         newBlock = Block(file_name, "")
 
         ## add new block to merkledag file
-        with open(output_file, 'r') as in_file:
+        with open(merkledag_file, 'r') as in_file:
             merkledag = json.load(in_file)
             merkledag.append(newBlock.__dict__)
 
         ## writing with indetation for a pretty print
-        with open(output_file, 'w') as out_file:
+        with open(merkledag_file, 'w') as out_file:
             json.dump(merkledag, out_file, indent=4)
 
     else:  ## if depend are given
@@ -93,20 +93,20 @@ def add_block(file_name, depend_files, output_file = 'merkledag_file.json'):
         newBlock = Block(file_name, previous_hashes)
 
         ## add new block to merkledag file
-        with open(output_file, 'r') as in_file:
+        with open(merkledag_file, 'r') as in_file:
             merkledag = json.load(in_file)
             merkledag.append(newBlock.__dict__)
 
         ## writing with indetation for a pretty print
-        with open(output_file, 'w') as out_file:
+        with open(merkledag_file, 'w') as out_file:
             json.dump(merkledag, out_file, indent=4)
 
 
 
 ## searches merkledag_file.json for the content hash of the file and returns it
-def lookup_file(file_checksum):
+def lookup_file(file_checksum, merkledag_file = 'merkledag_file.json'):
     out = False
-    with open('merkledag_file.json', 'r') as in_file:
+    with open(merkledag_file, 'r') as in_file:
         merkledag = json.load(in_file)
     for block in merkledag:
         if block['checksum'] in file_checksum:
@@ -115,9 +115,9 @@ def lookup_file(file_checksum):
 
 
 ## searches merkledag_file.json for the block hash and returns True if found
-def lookup_hash(block_hash):
+def lookup_hash(block_hash, merkledag_file = 'merkledag_file.json'):
     out = False
-    with open('merkledag_file.json', 'r') as in_file:
+    with open(merkledag_file, 'r') as in_file:
         merkledag = json.load(in_file)
     for block in merkledag:
         if block['hash'] in block_hash:

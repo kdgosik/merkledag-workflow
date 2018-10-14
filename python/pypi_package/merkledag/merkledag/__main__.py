@@ -24,9 +24,9 @@ def main():
     print('Added '+ data_file + ' to the merkle dag!')
     previous_list = args.link
     print('Linked ' + data_file + ' to the file(s): ' + ', '.join(previous_list))
-    output_file = args.output
-    print('Placed output in ' + output_file)
-    merkledag.add_block(data_file, previous_list, output_file)
+    merkledag_file = args.output
+    print('Placed output in ' + merkledag_file)
+    merkledag.add_block(data_file, previous_list, merkledag_file)
 
 
 if __name__ == '__main__':

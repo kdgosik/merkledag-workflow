@@ -9,24 +9,29 @@ import time
 from subprocess import PIPE, run
 from sys import platform
 
-# uses internal systems checksum sha 256 algoritm
+# uses internal systems checksum md5 (or sha 256) algoritm
 def checksum_file(name):
     if platform == "linux" or platform == "linux2":
         # linux
-        command = 'sha256sum '
+        # command = 'sha256sum '
+        command = 'md5sum '
     elif platform == "darwin":
         # OS X
-        command = 'shasum -a 256 '
+        # command = 'shasum -a 256 '
+        commnad = 'md5 '
     elif platform == "win32":
         # Windows
-        command = 'FCIV -sha256 '
+        # command = 'FCIV -sha256 '
+        command = 'FCIV -md5 '
 
     command = command + name
     result = run(command, stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
 
-    out = result.stdout.split('  ')
-    hash = out[0]
+    r = re.compile(('^[a-f0-9]{32}$'))
+    out = result.stdout.replace('\n', '').split(' ')
+    hash = list(filter(r.match, out))[0]
     return(hash)
+
 
 
 ## Block class for creating block structure
@@ -35,8 +40,10 @@ class Block:
     def __init__(self, name, previous_hashes):
         self.name = os.path.basename(name)
         self.path = name
-        self.timestamp = str(time.ctime(os.path.getmtime(name)))
+        self.created_time = str(time.ctime(os.path.getctime(name)))
+        self.updated_time = str(time.ctime(os.path.getmtime(name)))
         self.description = ''
+        self.tags = []
         self.author = ''
         self.checksum = self.checksum_file()
         self.previous_hashes = sorted(previous_hashes)
